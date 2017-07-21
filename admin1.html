@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Tours</title>
+
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+ 
+    <link href="css/tour.css" rel="stylesheet">
+
+ 
+<script>
+
+
+
+
+$(document).ready(function(){
+  
+  $('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  })
+
+})
+  </script>
+</head>
+
+<body>
+
+   
+
+
+    <header id="myCarousel" class="carousel slide">
+    
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+       
+        <div class="carousel-inner">
+            <div class="item active">
+           
+                <div class="fill" style="background-image:url('01.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Are You Planning For a Trip</h2>
+                </div>
+            </div>
+            <div class="item">
+              
+                <div class="fill" style="background-image:url('02.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>...Lets Go...</h2>
+                </div>
+            </div>
+            <div class="item">
+                
+                <div class="fill" style="background-image:url('03.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Grab Huge Discounts</h2>
+                </div>
+            </div>
+        </div>
+
+       
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+  
+  <div class="uu">
+  <div class="container2">
+
+  <ul class="tabs">
+    <li class="tab-link current" data-tab="tab-1">Package Details</li>
+    <li class="tab-link" data-tab="tab-2">View package Details</li>
+    <li class="tab-link" data-tab="tab-3">View Booking Details</li>
+    <li class="tab-link" data-tab="tab-4">View User Details</li>
+    <li class="tab-link" data-tab="tab-4">Log out</li>
+  </ul>
+
+  <div id="tab-1" class="tab-content current">
+    <div class="container">
+
+
+   <form class="well form-horizontal" id="contact_form">
+<fieldset>
+
+
+<legend>Add Tour Packages</legend>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Package ID:</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="packageid" placeholder="packageid" class="form-control"  type="number">
+  
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Add Place:</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+  <input name="addplace" placeholder="Add Place" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+       <div class="form-group">
+  <label class="col-md-4 control-label">No Of Adults:</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="adults" placeholder="No of Adults" class="form-control"  type="number">
+    </div>
+  </div>
+</div>
+
+
+
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">No of children: </label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="children" placeholder="No of children" class="form-control" type="number">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Description</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+ <!-- <input name="city" placeholder="city" class="form-control"  type="text">-->
+  <textarea rows="2" cols="20" name="description" class="form-control" form="addpackage"></textarea>
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Stay Amount:</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="stayamount" placeholder="Amount" class="form-control" type="number">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Food Amount: </label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-cutlery"></i></span>
+  <input name="foodamount" placeholder="Amount" class="form-control" type="number">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Airlines Amount: </label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-plane"></i></span>
+  <input name="airlinesamount" placeholder="Amount" class="form-control" type="number">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">No of Days: </label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
+  
+  <select name="noofdays" class="form-control selectpicker">
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+    </div>
+  </div>
+</div>
+   
+<div class="form-group">
+  <label class="col-md-4 control-label">No of nights: </label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
+  
+  <select name="noofnights" class="form-control selectpicker">
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Add Image: </label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+  <input  name="choose"  class="form-control" type="file">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >upload <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div>
+  </div>
+  <div id="tab-2" class="tab-content">
+     ADD
+  </div>
+  <div id="tab-3" class="tab-content">
+    ADD
+  </div>
+  <div id="tab-4" class="tab-content">
+    ADD
+  </div>
+
+</div>
+</div>
+  
+
+    <script src="js/jquery.js"></script>
+
+    
+    <script src="js/bootstrap.min.js"></script>
+
+   
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 
+    })
+    </script>
+
+</body>
+
+</html>
